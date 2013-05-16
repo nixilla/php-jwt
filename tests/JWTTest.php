@@ -1,6 +1,8 @@
 <?php
 
-include_once 'Authentication/JWT.php';
+include_once __DIR__.'/../Authentication/JWT.php';
+
+use JWT\Authentication\JWT;
 
 class JWTTest extends PHPUnit_Framework_TestCase {
 	function testEncodeDecode() {
@@ -31,5 +33,3 @@ class JWTTest extends PHPUnit_Framework_TestCase {
 		JWT::jsonDecode('this is not valid JSON string');
 	}
 }
-
-?>

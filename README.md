@@ -1,3 +1,25 @@
+NOTICE
+======
+
+This project is forked from firebase/php-jwt with some small changes:
+
+    1) Namespaced
+    2) Added composer.json
+
+To use the library, composer autoloader will take care of include_once, so skip
+that step below.
+
+```php
+<?php
+    use JWT\Authentication\JWT;
+
+    // ...
+
+    $jwt = JWT::encode($token, $key);
+    $decoded = JWT::decode($jwt, $key);
+?>
+```
+
 
 PHP-JWT
 =======
