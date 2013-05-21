@@ -1,3 +1,8 @@
+JWT Implementation in PHP
+=========================
+
+[![Travis](https://travis-ci.org/nixilla/php-jwt.png)](https://travis-ci.org/nixilla/php-jwt)
+
 ```php
 <?php
 require_once './vendor/autoload.php';
