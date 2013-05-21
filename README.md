@@ -3,17 +3,17 @@ NOTICE
 
 This project is forked from firebase/php-jwt with some small changes:
 
-    1) Namespaced
+    1) Properly namespaced (psr-0)
     2) Added composer.json
+    3) Added phpunit as require-dev
+    4) Added .travis.yml for Travis CI
 
 To use the library, composer autoloader will take care of include_once, so skip
 that step below.
 
 ```php
 <?php
-    use JWT\Authentication\JWT;
-
-    // ...
+    require_once './vendor/autoload.php';
 
     $jwt = JWT::encode($token, $key);
     $decoded = JWT::decode($jwt, $key);
@@ -30,7 +30,7 @@ Example
 -------
 ```php
 <?php
-  include_once 'Authentication/JWT.php';
+  require_once './vendor/autoload.php';
 
   $key = "example_key";
   $token = array(
@@ -52,12 +52,12 @@ Tests
 Run the tests using phpunit:
 
 ```bash
-    $ pear install PHPUnit
-    $ phpunit tests/
-    PHPUnit 3.7.10 by Sebastian Bergmann.
-    .....
-    Time: 0 seconds, Memory: 2.50Mb
-    OK (5 tests, 5 assertions)
+    git clone https://github.com/nixilla/php-jwt.git && \
+    cd php-jwt && \
+    mkdir bin && \
+    curl -sS https://getcomposer.org/installer | php -- --install-dir=bin && \
+    ./bin/composer.phar install --dev && \
+    ./bin/phpunit
 ```
 
 License
