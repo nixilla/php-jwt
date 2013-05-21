@@ -54,7 +54,7 @@ Tests
 Run the tests using phpunit:
 
 ```bash
-git clone https://github.com/nixilla/php-jwt.git && \
+git clone https://github.com/jwmickey/php-jwt.git && \
 cd php-jwt && \
 mkdir bin && \
 curl -sS https://getcomposer.org/installer | php -- --install-dir=bin && \
