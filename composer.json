@@ -6,6 +6,14 @@
     "license": "BSD-3-Clause",
     "authors": [
         {
+            "name": "Neuman Vong",
+            "email": "neuman+pear@twilio.com"
+        },
+        {
+            "name": "Anant Narayanan",
+            "email": "anant@php.net"
+        },
+        {
             "name": "Jody Mickey",
             "email": "jody.mickey@gmail.com"
         },
