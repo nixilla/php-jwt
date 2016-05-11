@@ -43,7 +43,7 @@ $token = array(
 );
 
 $jwt = JWT::encode($token, $key);
-$decoded = JWT::decode($jwt, $key);
+$decoded = JWT::decode($jwt, $key, 'HS256');
 
 print_r($decoded);
 ?>
